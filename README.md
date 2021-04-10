@@ -28,12 +28,6 @@ Optional Personal Access Token to access repository. You need to either specify 
 
 Make the downloaded file executable
 
-## Outputs
-
-### `version`
-
-The version number of the release tag. Can be used to deploy for example to itch.io
-
 ## Example usage
 
 ```yaml
@@ -46,6 +40,3 @@ with:
   token: ${{ secrets.YOUR_TOKEN }}
 ```
 
-## Support
-
-This action only supports Linux runners as this is a [docker container](https://docs.github.com/en/actions/creating-actions/about-actions#types-of-actions) action. If you encounter `Error: Container action is only supported on Linux` then you are using non-linux runner.
