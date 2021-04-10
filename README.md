@@ -24,6 +24,10 @@ Optional target file path. Only supports paths to subdirectories of the Github A
 
 Optional Personal Access Token to access repository. You need to either specify this or use the ``secrets.GITHUB_TOKEN`` environment variable. Note that if you are working with a private repository, you cannot use the default ``secrets.GITHUB_TOKEN`` - you have to set up a [personal access token with at least the scope org:hook](https://github.com/dsaltares/fetch-gh-release-asset/issues/10#issuecomment-668665447).
 
+### `chmod_x`
+
+Make the downloaded file executable
+
 ## Outputs
 
 ### `version`
