@@ -68,4 +68,5 @@ fi
 DIRNAME="$(dirname $TARGET)"
 if [[ $DIRNAME == *bin ]]; then 
   echo $DIRNAME >> $GITHUB_PATH
+  echo $DIRNAME saved in path
 fi
