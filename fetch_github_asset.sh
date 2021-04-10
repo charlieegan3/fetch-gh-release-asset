@@ -62,11 +62,8 @@ echo "::set-output name=version::$TAG_VERSION"
 
 if ! [[ -z "$INPUT_CHMOD_X" ]]; then
   chmod +x ${TARGET}
+  mkdir -p "$GITHUB_WORKSPACE/bin/"
+  mv ${TARGET} "$GITHUB_WORKSPACE/bin/"
+  echo "$GITHUB_WORKSPACE/bin/" >> $GITHUB_PATH
   echo "target made executable"
-fi
-
-DIRNAME="$(dirname $TARGET)"
-if [[ $DIRNAME == *bin ]]; then 
-  echo $DIRNAME >> $GITHUB_PATH
-  echo $DIRNAME saved in path
 fi
