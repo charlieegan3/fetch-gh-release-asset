@@ -62,8 +62,6 @@ curl \
   --create-dirs \
   -o ${TARGET}
 
-echo "::set-output name=version::$TAG_VERSION"
-
 if ! [[ -z "$INPUT_CHMOD_X" ]]; then
   chmod +x ${TARGET}
   echo "$(dirname $TARGET)" >> $GITHUB_PATH
