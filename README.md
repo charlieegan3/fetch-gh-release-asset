@@ -1,6 +1,6 @@
-# Fetch GH Release Asset
+# Fetch Release Asset
 
-This action downloads an asset from a Github release. Private repos are supported.
+This GitHub action downloads an asset from a Github release. Private repos are supported.
 
 ## Inputs
 
