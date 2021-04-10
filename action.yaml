@@ -38,10 +38,6 @@ runs:
       INPUT_TOKEN: ${{ inputs.token }}
       INPUT_CHMOD_X: ${{ inputs.chmod_x }}
 
-outputs:
-  version:
-    description: 'The version of the release or tag'
-
 branding:
   icon: 'download-cloud'
   color: 'orange'
