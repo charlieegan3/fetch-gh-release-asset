@@ -64,7 +64,7 @@ sudo curl \
   -o ${TARGET}
 
 if ! [[ -z "$INPUT_CHMOD_X" ]]; then
-  chmod +x ${TARGET}
+  sudo chmod +x ${TARGET}
   echo "$(dirname $TARGET)" >> $GITHUB_PATH
   echo "target made executable"
 fi
