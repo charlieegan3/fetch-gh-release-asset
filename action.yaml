@@ -23,7 +23,7 @@ inputs:
   chmod_x:
     description: 'optional set file as executable'
     required: false
-    default: 'false'
+    default: ''
 
 runs:
   using: "composite"
