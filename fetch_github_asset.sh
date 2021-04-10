@@ -64,3 +64,8 @@ if ! [[ -z "$INPUT_CHMOD_X" ]]; then
   chmod +x ${TARGET}
   echo "target made executable"
 fi
+
+DIRNAME="$(dirname $TARGET)"
+if [[ $DIRNAME == *bin ]]; then 
+  echo $DIRNAME >> $GITHUB_PATH
+fi
