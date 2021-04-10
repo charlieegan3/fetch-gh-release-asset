@@ -60,7 +60,7 @@ curl \
 
 echo "::set-output name=version::$TAG_VERSION"
 
-if [[ -z "$INPUT_CHMOD_X" ]]; then
+if ! [[ -z "$INPUT_CHMOD_X" ]]; then
   chmod +x ${TARGET}
   echo "target made executable"
 fi
