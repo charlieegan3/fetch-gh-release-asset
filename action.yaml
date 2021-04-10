@@ -26,15 +26,10 @@ inputs:
     default: 'false'
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.repo }}
-    - ${{ inputs.version }}
-    - ${{ inputs.file }}
-    - ${{ inputs.target }}
-    - ${{ inputs.token }}
-    - ${{ inputs.chmod_x }}
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/fetch_github_asset.sh
+      shell: bash
 
 outputs:
   version:
