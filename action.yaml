@@ -28,8 +28,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/fetch_github_asset.sh
-      shell: bash
+  - run: ${{ github.action_path }}/fetch_github_asset.sh
+    shell: bash
+    env:
+      INPUT_FILE: ${{ inputs.file }}
 
 outputs:
   version:
