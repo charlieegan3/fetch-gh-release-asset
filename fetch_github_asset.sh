@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt-get install -y curl jq
+set -exo pipefail
 
-env
+sudo apt-get install -y curl jq
 
 if [[ -z "$INPUT_FILE" ]]; then
   echo "Missing file input in the action"
