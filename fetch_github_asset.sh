@@ -64,6 +64,6 @@ if ! [[ -z "$INPUT_CHMOD_X" ]]; then
   chmod +x ${TARGET}
   mkdir -p "$GITHUB_WORKSPACE/bin/"
   mv ${TARGET} "$GITHUB_WORKSPACE/bin/"
-  echo "$GITHUB_WORKSPACE/bin/" >> $GITHUB_PATH
+  echo "::add-path::$GITHUB_WORKSPACE/bin/"
   echo "target made executable"
 fi
