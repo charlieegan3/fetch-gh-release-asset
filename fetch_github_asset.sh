@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install curl jq
+apt-get install -y curl jq
 
 if [[ -z "$INPUT_FILE" ]]; then
   echo "Missing file input in the action"
