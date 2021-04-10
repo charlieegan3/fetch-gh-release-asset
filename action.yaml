@@ -20,6 +20,10 @@ inputs:
     description: 'optional Personal Access Token to access external repository'
     required: false
     default: ''
+  chmod_x:
+    description: 'optional set file as executable'
+    required: false
+    default: 'false'
 
 runs:
   using: 'docker'
@@ -30,6 +34,7 @@ runs:
     - ${{ inputs.file }}
     - ${{ inputs.target }}
     - ${{ inputs.token }}
+    - ${{ inputs.chmod_x }}
 
 outputs:
   version:
