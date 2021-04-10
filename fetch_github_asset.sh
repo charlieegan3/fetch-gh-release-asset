@@ -2,6 +2,8 @@
 
 sudo apt-get install -y curl jq
 
+env
+
 if [[ -z "$INPUT_FILE" ]]; then
   echo "Missing file input in the action"
   exit 1
