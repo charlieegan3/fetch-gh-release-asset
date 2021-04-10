@@ -54,7 +54,8 @@ if [[ -z "$ASSET_ID" ]]; then
   exit 1
 fi
 
-curl \
+# sudo to allow to write to path location if needed
+sudo curl \
   -J \
   -L \
   -H "Accept: application/octet-stream" \
