@@ -1,6 +1,6 @@
 # Fetch Release Asset
 
-This GitHub action downloads an asset from a Github release. Private repos are supported.
+This GitHub action downloads an asset from a Github release. Private repos are supported. Forked from [dsaltares/fetch-gh-release-asset](https://github.com/dsaltares/fetch-gh-release-asset), changes make to support installing binary to path (no longer running in Docker).
 
 ## Inputs
 
