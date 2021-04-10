@@ -39,5 +39,5 @@ runs:
       INPUT_CHMOD_X: ${{ inputs.chmod_x }}
 
 branding:
-  icon: 'download-cloud'
-  color: 'orange'
+  icon: 'arrow-down-circle'
+  color: 'black'
