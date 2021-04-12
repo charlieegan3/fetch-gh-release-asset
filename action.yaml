@@ -28,7 +28,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - run: ${{ github.action_path }}/fetch_github_asset.sh
+  - run: |
+      if ! command -v retry &> /dev/null; then \
+		    sudo sh -c "curl https://raw.githubusercontent.com/kadwanev/retry/master/retry -o /usr/local/bin/retry && chmod +x /usr/local/bin/retry"; \
+	    fi
+      retry ${{ github.action_path }}/fetch_github_asset.sh
     shell: bash
     env:
       INPUT_REPO: ${{ inputs.repo }}
