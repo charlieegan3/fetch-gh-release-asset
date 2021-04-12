@@ -30,8 +30,8 @@ runs:
   steps:
   - run: |
       if ! command -v retry &> /dev/null; then \
-		    sudo sh -c "curl https://raw.githubusercontent.com/kadwanev/retry/master/retry -o /usr/local/bin/retry && chmod +x /usr/local/bin/retry"; \
-	    fi
+        sudo sh -c "curl https://raw.githubusercontent.com/kadwanev/retry/master/retry -o /usr/local/bin/retry && chmod +x /usr/local/bin/retry"; \
+      fi
       retry ${{ github.action_path }}/fetch_github_asset.sh
     shell: bash
     env:
